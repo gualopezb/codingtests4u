@@ -2,6 +2,7 @@ use Mix.Config
 
 # Configure your database
 config :codexamer, Codexamer.Repo,
+  migration_timestamps: [type: :utc_datetime_usec],
   username: System.get_env("POSTGRES_USERNAME"),
   password: System.get_env("POSTGRES_PASSWORD"),
   database: "codexamer_dev",
