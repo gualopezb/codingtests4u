@@ -36,3 +36,5 @@
     </ul>
   </article>
 </section>
+
+<%= link("Create Quiz", to: Routes.quiz_path(@conn, :create, category_id: 46), method: :post) %>

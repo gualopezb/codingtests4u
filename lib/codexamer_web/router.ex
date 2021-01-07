@@ -17,6 +17,7 @@ defmodule CodexamerWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    post "/quizzes", QuizController, :create
   end
 
   # Other scopes may use custom stacks.
