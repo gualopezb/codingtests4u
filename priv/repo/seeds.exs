@@ -5,12 +5,12 @@
 # Inside the script, you can read and write to any of your
 # repositories directly:
 #
-#     Codexamer.Repo.insert!(%Codexamer.SomeSchema{})
+#     Codingtests4u.Repo.insert!(%Codingtests4u.SomeSchema{})
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-alias Codexamer.{Repo, Questionnaires}
+alias Codingtests4u.{Repo, Questionnaires}
 alias Questionnaires.Schema.{Category, Question, QuestionOption}
 
 current_time = DateTime.utc_now()

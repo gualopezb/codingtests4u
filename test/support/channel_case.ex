@@ -1,4 +1,4 @@
-defmodule CodexamerWeb.ChannelCase do
+defmodule Codingtests4uWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -11,7 +11,7 @@ defmodule CodexamerWeb.ChannelCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use CodexamerWeb.ChannelCase, async: true`, although
+  by setting `use Codingtests4uWeb.ChannelCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -21,18 +21,18 @@ defmodule CodexamerWeb.ChannelCase do
     quote do
       # Import conveniences for testing with channels
       import Phoenix.ChannelTest
-      import CodexamerWeb.ChannelCase
+      import Codingtests4uWeb.ChannelCase
 
       # The default endpoint for testing
-      @endpoint CodexamerWeb.Endpoint
+      @endpoint Codingtests4uWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Codexamer.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Codingtests4u.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Codexamer.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Codingtests4u.Repo, {:shared, self()})
     end
 
     :ok

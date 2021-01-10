@@ -1,4 +1,4 @@
-defmodule CodexamerWeb.ConnCase do
+defmodule Codingtests4uWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule CodexamerWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use CodexamerWeb.ConnCase, async: true`, although
+  by setting `use Codingtests4uWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -22,20 +22,20 @@ defmodule CodexamerWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import CodexamerWeb.ConnCase
+      import Codingtests4uWeb.ConnCase
 
-      alias CodexamerWeb.Router.Helpers, as: Routes
+      alias Codingtests4uWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint CodexamerWeb.Endpoint
+      @endpoint Codingtests4uWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Codexamer.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Codingtests4u.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Codexamer.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Codingtests4u.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

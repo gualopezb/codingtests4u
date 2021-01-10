@@ -1,11 +1,11 @@
 use Mix.Config
 
 # Configure your database
-config :codexamer, Codexamer.Repo,
+config :codingtests4u, Codingtests4u.Repo,
   migration_timestamps: [type: :utc_datetime_usec],
   username: System.get_env("POSTGRES_USERNAME"),
   password: System.get_env("POSTGRES_PASSWORD"),
-  database: "codexamer_dev",
+  database: "codingtests4u_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -16,7 +16,7 @@ config :codexamer, Codexamer.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :codexamer, CodexamerWeb.Endpoint,
+config :codingtests4u, Codingtests4uWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -56,13 +56,13 @@ config :codexamer, CodexamerWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :codexamer, CodexamerWeb.Endpoint,
+config :codingtests4u, Codingtests4uWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/codexamer_web/(live|views)/.*(ex)$",
-      ~r"lib/codexamer_web/templates/.*(eex)$"
+      ~r"lib/codingtests4u_web/(live|views)/.*(ex)$",
+      ~r"lib/codingtests4u_web/templates/.*(eex)$"
     ]
   ]
 

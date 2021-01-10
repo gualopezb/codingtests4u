@@ -7,15 +7,15 @@
 # General application configuration
 use Mix.Config
 
-config :codexamer,
-  ecto_repos: [Codexamer.Repo]
+config :codingtests4u,
+  ecto_repos: [Codingtests4u.Repo]
 
 # Configures the endpoint
-config :codexamer, CodexamerWeb.Endpoint,
+config :codingtests4u, Codingtests4uWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "y052Pz/I7z6OFlU30DR445BeCB0n4ervyKY/yx6zK0AMD59/DLg703A8pzN6axe1",
-  render_errors: [view: CodexamerWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Codexamer.PubSub,
+  render_errors: [view: Codingtests4uWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Codingtests4u.PubSub,
   live_view: [signing_salt: "Ljfv5ha6"]
 
 # Configures Elixir's Logger

@@ -1,4 +1,4 @@
-defmodule Codexamer.Repo.Migrations.CreateQuestions do
+defmodule Codingtests4u.Repo.Migrations.CreateQuestions do
   use Ecto.Migration
 
   def change do

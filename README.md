@@ -1,4 +1,4 @@
-# Codexamer
+# CodingTests4u
 
 To start your Phoenix server:
 
